@@ -1,0 +1,47 @@
+{% extends "base.html"%}
+{% block content %}
+	<div class="hero hero--blue">
+		<div class="container">
+			<div class="cui">
+				<h5>Selection</h5>
+				<p>Please review the selection and click 'Create' to create the Template</p>
+			</div>
+		</div>
+	</div>
+
+<br>
+    {% if message %}
+    <div class="alert alert-success" style="background-color:#D1F0D9;">
+        <strong></strong>{{message}}
+    </div>
+    {%endif%}
+
+<div class="responsive-table">
+    <table class="table table--bordered">
+        <thead>
+            <tr>
+                <th>Templates</th>
+                <th>Create</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <form action="/create/{{pi}}/selection"  method="post">
+
+                    <td name="templates" id="templates">
+                        {{ templates.name}}
+                    </td>
+                        <input type="hidden" name="templates" value="{{ templates.id }}" />
+                    <td>
+                        <input type="submit" value="Create">
+                    </td>
+                    </form>
+                </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+{% endblock %}
+

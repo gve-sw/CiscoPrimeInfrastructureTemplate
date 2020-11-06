@@ -1,0 +1,39 @@
+{% extends "base.html"%}
+
+{% block content %}
+	<div class="hero hero--blue">
+		<div class="container">
+			<div class="cui">
+				<h5>Templates</h5>
+				<p>Here is the list of all the configuration templates in your Database</p>
+			</div>
+		</div>
+	</div>
+<br>
+
+<div class="responsive-table">
+    <table class="table table--bordered">
+        <thead>
+            <tr>
+                <th>Template ID</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for all_templates in content %}
+                {% for template in all_templates.templates %}
+                <tr>
+                    <td>{{template.id}}</td>
+                    <td><a href="/templates/{{template.id}}">{{template.name}}</a></td>
+                    <td>{{template.description}}</td>
+                </tr>
+                {%endfor%}
+            {%endfor%}
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}
+

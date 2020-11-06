@@ -1,0 +1,57 @@
+{% extends "base.html"%}
+{% block content %}
+<html>
+<head>
+</head>
+
+<div class="hero hero--blue">
+		<div class="container">
+			<div class="cui">
+				<h5>Configure</h5>
+				<p>Choose the Servers and the Template Name then click "Submit" to review and deploy changes</p>
+			</div>
+		</div>
+	</div>
+<br>
+
+<div class="responsive-table">
+    <table class="table table--bordered">
+        <thead>
+            <tr>
+                <th>Servers</th>
+                <th>Template Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <form action="/deploy/{{pi}}/"  method="post"  name="selection">
+                    <td>
+                        <select  id="servers" name="servers">
+                            {% for d in servers %}
+                          <option value="{{d.id}}">{{d.name}} - {{d.ip}}</option>
+                            {%endfor%}
+                        </select>
+                    </td>
+                    <td>
+                        <select  name="templates" id="templates" name="templates">
+                            {% for t in templates %}
+                          <option value="{{t.id}}">{{t.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+
+                    <td>
+                        <input type="submit" value="Submit!" />
+                    </td>
+
+                    </form>
+                </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}
+

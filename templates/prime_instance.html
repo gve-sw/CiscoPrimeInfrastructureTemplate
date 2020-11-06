@@ -1,0 +1,38 @@
+{% extends "base.html"%}
+{% block content %}
+<html>
+
+<div class="hero hero--blue">
+		<div class="container">
+			<div class="cui">
+				<h5>Prime Instance</h5>
+				<p>Choose the Prime Instance</p>
+			</div>
+		</div>
+	</div>
+<br>
+<div class="responsive-table">
+    <table class="table table--bordered">
+        <thead>
+            <tr>
+                <th>Ip Address</th>
+                <th>ID</th>
+                <th>Hostname</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for pi in content %}
+                <tr>
+                    <td>{{pi.base_url}}</td>
+                    <td><a href="/{{page}}/{{pi.id}}">{{pi.id}}</a></td>
+                    <td>{{pi.hostName}}</td>
+                </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}
+

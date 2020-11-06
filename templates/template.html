@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+
+{% block content %}
+	<div class="hero hero--blue">
+		<div class="container">
+			<div class="cui">
+            </br>
+			</div>
+		</div>
+	</div>
+
+	<div class="hero hero--blue">
+		<div class="container">
+<div class="responsive-table">
+    <table class="table table--bordered">
+		<th>ID</th><td>{{content.id}}</td> </tr>
+		<th>Name</th><td>{{content.name}}</td><tr>
+		<th>Author</th><td>{{content.author}}</td><tr>
+		<th>Version</th><td>{{content.version}}</td><tr>
+		<th>Device Type</th><td>{{content.deviceType}}</td><tr>
+		<th>Tags</th> <td>{{content.tages}}</td><tr>
+		<th>Content</th> <td style="white-space:pre-wrap; word-wrap:break-word">{{content.content}}</td><tr>
+		<th>Variables</th><td style="white-space:pre-wrap; word-wrap:break-word">{{content.variables}}</td><tr>
+
+    </table>
+		</div>
+	</div>
+	</div>
+
+
+{% endblock %}
+

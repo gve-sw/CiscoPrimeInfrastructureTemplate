@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% block content %}
+	<div class="hero hero--blue">
+		<div class="container">
+			<div class="cui">
+				<h5>Error</h5>
+				<p>Can not perform operation. Please consult to the IT team.</p>
+			</div>
+		</div>
+	</div>
+
+<br>
+    {% if message %}
+    <div class="alert alert-success" style="background-color:#D1F0D9;">
+        <strong></strong>{{message}}
+    </div>
+    {%endif%}
+
+
+
+
+{% endblock %}
+

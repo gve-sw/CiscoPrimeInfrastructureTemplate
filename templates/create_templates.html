@@ -1,0 +1,51 @@
+{% extends "base.html"%}
+{% block content %}
+<html>
+<head>
+</head>
+
+<div class="hero hero--blue">
+		<div class="container">
+			<div class="cui">
+				<h5>Create Templates</h5>
+				<p>Choose the Template Name then click "Create" to review and create the template</p>
+			</div>
+		</div>
+	</div>
+<br>
+
+<div class="responsive-table">
+    <table class="table table--bordered">
+        <thead>
+            <tr>
+
+                <th>Template Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <form action="/create/{{pi}}/"  method="post"  name="selection">
+
+                    <td>
+                        <select  name="templates" id="templates" name="templates">
+                            {% for t in templates %}
+                          <option value="{{t.id}}">{{t.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+
+                    <td>
+                        <input type="submit" value="Submit!" />
+                    </td>
+
+                    </form>
+                </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}
+

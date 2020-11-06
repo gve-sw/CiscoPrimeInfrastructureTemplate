@@ -1,0 +1,51 @@
+{% extends "base.html"%}
+{% block content %}
+	<div class="hero hero--blue">
+		<div class="container">
+			<div class="cui">
+				<h5>Selection</h5>
+				<p>Please review the selection and click 'Deploy' to apply the configuration</p>
+			</div>
+		</div>
+	</div>
+
+<br>
+    {% if message %}
+    <div class="alert alert-success" style="background-color:#D1F0D9;">
+        <strong></strong>{{message}}
+    </div>
+    {%endif%}
+
+<div class="responsive-table">
+    <table class="table table--bordered">
+        <thead>
+            <tr>
+                <th>Servers</th>
+                <th>Template Name</th>
+                <th>Deploy</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <form action="/deploy/{{pi}}/selection"  method="post">
+                    <td name="servers" id="servers">
+                        {{ servers }}
+                    </td>
+                        <input type="hidden" name="servers" value="{{ servers }}" />
+                    <td name="templates" id="templates">
+                        {{ templates.name}}
+                    </td>
+                        <input type="hidden" name="templates" value="{{ templates.id }}" />
+                    <td>
+                        <input type="submit" value="Deploy">
+                    </td>
+                    </form>
+                </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+{% endblock %}
+
