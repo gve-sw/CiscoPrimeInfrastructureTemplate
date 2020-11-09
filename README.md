@@ -5,9 +5,9 @@ Store Configuration Templates in local database to have a centralized configurat
 * Eda Akturk (eakturk@cisco.com)
 
 ## Solution Components
-*  Cisco Prime Infrastructure(PI)
-*  MongoDB  
-*  Flask
+*  Cisco Prime Infrastructure (https://developer.cisco.com/site/prime-infrastructure/)
+*  MongoDB (https://www.mongodb.com/)
+*  Python 3.8 (https://www.python.org/)
 
 ## Installation/Configuration
 
@@ -53,7 +53,7 @@ PI2 = {
 ```
 *Database Connection*
 
-2. Download and Install MongoDB. 
+2. Download and Install MongoDB from https://www.mongodb.com/. 
 
 3. Create a collection in MongoDB and add the credentials to env_var.py.  
 ```
