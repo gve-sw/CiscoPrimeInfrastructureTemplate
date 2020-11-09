@@ -82,11 +82,23 @@ Run the python script
     $ python start.py
 ```
 
-From the Flask application you can view all the templates in you local database, view all the inventory on the selected PI instance, Create a new template for the selected PI instance and deploy a job to a PI instance. 
+From the Flask application you can:
+*  View all the templates in you local database
+*  View all the inventory on the selected PI instance
+*  Create a new template for the selected PI instance 
+*  Deploy a job to a device in the selected PI instance
 
 # Screenshots
+Here are some sample screenshots of the prototype.
 
-![/IMAGES/0image.png](/IMAGES/0image.png)
+*Choose Prime Instance:*
+![/IMAGES/prime_instance.PNG](/IMAGES/prime_instance.PNG)
+
+*Select Template from local database to add to selected PI:*
+![/IMAGES/create.PNG](/IMAGES/create.PNG)
+
+*Select template and select device to create job to deploy template:*
+![/IMAGES/deploy.PNG](/IMAGES/deploy.PNG)
 
 ### LICENSE
 
@@ -103,3 +115,5 @@ See our contributing guidelines [here](CONTRIBUTING.md)
 #### DISCLAIMER:
 <b>Please note:</b> This script is meant for demo purposes only. All tools/ scripts in this repo are released for use "AS IS" without any warranties of any kind, including, but not limited to their installation, use, or performance. Any use of these scripts and tools is at your own risk. There is no guarantee that they have been through thorough testing in a comparable environment and we are not responsible for any damage or data loss incurred with their use.
 You are responsible for reviewing and testing any scripts you run thoroughly before use in any non-testing environment.
+
+![/IMAGES/0image.png](/IMAGES/0image.png)
